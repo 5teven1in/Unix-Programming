@@ -1,13 +1,13 @@
-CXX	= g++
-CFLAGS	= -shared -fPIC -std=c++17
-LDL	= -ldl
+CXX		= g++
+CXXFLAGS	= -shared -fPIC -std=c++17
+LDL		= -ldl
 
-PROGS	= fsmon.so
+PROGS		= fsmon.so
 
 all: $(PROGS)
 
 %.so: %.cpp
-	$(CXX) -o $@ $(CFLAGS) $^ $(LDL)
+	$(CXX) -o $@ $(CXXFLAGS) $^ $(LDL)
 
 .PHONY: clean
 
